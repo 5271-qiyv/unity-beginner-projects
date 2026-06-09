@@ -1,0 +1,34 @@
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string input=Console.ReadLine();
+            string[] charArray=input.Split(" ");
+            int[] number=new int[charArray.Length];
+            for(int i=0;i<charArray.Length;i++)
+            {
+                int num= Convert.ToInt32(charArray[i]);
+                number[i] = num;
+            }
+            int index=0;
+            int min=number[0];
+            for (int i = 0; i < number.Length; i++)
+            {
+                if (number[i] < min)
+                {
+                    min=number[i];
+                    index= i;
+                }
+            }
+           int temp=number[0];
+            number[0] = number[index];
+            number[index] = temp;
+            for (int i = 0; i < number.Length; i++)
+                {
+                Console.WriteLine(number[i]);
+                }
+            }
+    }
+}
