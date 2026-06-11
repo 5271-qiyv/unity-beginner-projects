@@ -1,0 +1,12 @@
+# VS 缓存目录
+.vs/
+*.vsidx
+*.suo
+*.user
+
+# 编译生成目录
+bin/
+obj/
+
+# 系统缩略图缓存
+Thumbs.db
